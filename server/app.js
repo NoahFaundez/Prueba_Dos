@@ -46,6 +46,16 @@ app.post('/api/products', async (req, res) => {
     res.json(product);
 });
 
+app.put('/api/products/:id', async (req, res) => {
+    const product = await Product.findByPk(req.params.id);
+    if (product) {
+        await Product.update(req.body);
+        res.json(product);
+    } else {
+        res.status(404).json({ message: 'Product not found' });
+    }
+});
+
 app.delete('/api/products/:id', async (req, res) => {
     const product = await Product.findByPk(req.params.id);
     if (product) {
