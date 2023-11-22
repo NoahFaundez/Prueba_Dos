@@ -14,12 +14,12 @@ To run the entire application install [NodeJS](https://nodejs.org/en) of prefere
 
 Go to the client folder in th terminal
 
+Run `npm install -g @angular/cli` for install the AngularCLI
+
 Run `npm install` and `ng serve` to run the application
 
 ## Server 
 
 Go to the server folder in th terminal
-
-Run `npm install -g @angular/cli` for install the AngularCLI
 
 Run `npm install` and `node app.js` to run the server side application
