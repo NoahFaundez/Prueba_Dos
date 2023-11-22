@@ -17,7 +17,11 @@ const sequelize = new Sequelize({
 // Define Product model
 class Product extends Model { }
 Product.init({
-    id: DataTypes.NUMBER,
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+    },
     name: DataTypes.STRING,
     price: DataTypes.STRING,
     description: DataTypes.STRING,
